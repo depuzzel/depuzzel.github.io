@@ -3,3 +3,10 @@ mixin sectionTitle(name)
     div.row
         div.col-md-12
             h2.section-header #{name}
+
+mixin title(name)
+    title Kinderpraktijk de puzzel - #{name}
+
+mixin meta(title, description)
+    +title(title)
+    meta(name="description", content=description)

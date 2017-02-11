@@ -1,0 +1,16 @@
+include includes/mixins.pug
+
+html
+    head
+        +meta('start', 'Hallo, dit is de startpagina van de puzzel kinderpraktijk')
+
+        include includes/csslink.pug
+    body
+        div(class="hidden-xs-down top-bar")
+        div.container
+            include includes/header.pug
+
+            div.body
+                block content
+
+        include includes/footer.pug
