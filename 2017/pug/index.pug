@@ -1,0 +1,17 @@
+include includes/mixins.pug
+
+html
+    head
+        title Kinderpraktijk - De puzzel
+
+        link(rel='stylesheet', href='assets/css/bootstrap.css')
+        link(rel='stylesheet', href='assets/css/site.css')
+        link(href="https://fonts.googleapis.com/css?family=Amatic+SC", rel="stylesheet")
+
+    body
+        div(class="hidden-xs-down top-bar")
+        div.container
+            include includes/header.pug
+
+            div.body
+                include includes/_home.pug

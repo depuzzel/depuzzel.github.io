@@ -4,7 +4,7 @@ body {
 .top-bar {
     height: 40px;
     border-bottom: 2px solid #0066FF;
-    background: url('assets/images/pattern.png') repeat;
+    background: url('../images/pattern.png') repeat;
     margin-bottom: 30px;
 }
 
