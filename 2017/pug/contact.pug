@@ -1,4 +1,8 @@
 extends master
+include includes/mixins.pug
+
+block meta
+    +meta('contact', 'Dit is de contactpagina van kinderpraktijk de puzzel')
 
 block content
-    h1 Hello from contact
+    +sectionTitle('Contact') 

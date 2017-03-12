@@ -1,4 +1,3 @@
-
 mixin sectionTitle(name)
     div.row
         div.col-md-12
@@ -10,3 +9,27 @@ mixin title(name)
 mixin meta(title, description)
     +title(title)
     meta(name="description", content=description)
+
+mixin lipsum(count = 4) 
+    - for (var i = 0; i < count; i++) {
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    - }
+
+mixin dienst(exclude)
+    - var list = ['dienst-a', 'dienst-b', 'dienst-c', 'dienst-d'];
+    - var images = ['/assets/images/home/page1-img1.jpg', '/assets/images/home/page1-img2.jpg', '/assets/images/home/page1-img3.jpg', '/assets/images/home/page1-img4.jpg'];
+    - var names = ['Dienst a', 'Dienst b', 'Dienst c', 'Dienst d'];
+
+    +sectionTitle('Bekijk ook')
+
+    div.row
+        - for (var i = 0; i < 4; i++) {
+        - if (list[i] !== exclude) {
+        div.col-md-4
+            div.card.card-inverse.img-filter.text-center.home-card
+                img(src=images[i])
+                div.card-img-overlay
+                    p.text.card-info #{names[i]}
+                    a.btn.btn-default.btn-block.home-btn(href='/diensten/' + list[i] +'.html') Lees meer
+        - }
+        - }

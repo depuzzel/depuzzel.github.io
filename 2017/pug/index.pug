@@ -2,15 +2,32 @@ extends master
 
 include includes/mixins.pug
 
-mixin loco(name, picture)
-    div.col-sm-3
-        img(src=picture)
+mixin loco(name, picture, link)
+    div.col-sm-6.col-md-3
+        div.card.card-inverse.img-filter.text-center.home-card
+            img(src=picture)
+            div.card-img-overlay
+                p.text.card-info #{name}
+                a.btn.btn-default.btn-block.home-btn(href=link) Lees meer
+
+block meta
+    +meta('start', 'Hallo, dit is de startpagina van de puzzel kinderpraktijk')
 
 block content
+    div.row
+        div.col-md-8.offset-md-2.info-column
+            p 
+                | Bij kinderpraktijk de puzzel te Retie zorgen we voor een goede aanpak van uw kind.
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            p
+                | Aarzel niet om 
+                a(href="contact.html") contact
+                |  op te nemen met ons voor verdere vragen!
+
     +sectionTitle('Motoriek')
 
     div.row
-        +loco('', 'assets/images/home/page1-img1.jpg')
-        +loco('', 'assets/images/home/page1-img2.jpg')
-        +loco('', 'assets/images/home/page1-img3.jpg')
-        +loco('', 'assets/images/home/page1-img4.jpg')
+        +loco('Motoriek', 'assets/images/home/page1-img1.jpg', 'diensten.html')
+        +loco('Schrijven & lezen', 'assets/images/home/page1-img2.jpg', 'diensten.html')
+        +loco('Dienst a', 'assets/images/home/page1-img3.jpg', 'diensten.html')
+        +loco('Dienst b', 'assets/images/home/page1-img4.jpg', 'diensten.html')

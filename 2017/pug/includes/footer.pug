@@ -1,4 +1,35 @@
+mixin listItem(name, link) 
+    li
+        a(href=link) #{name}
+
 div.container
     div.row
         div.col-md-12
-            p Footer
+            footer.main
+                div.row
+                    div.col-md-3
+                        p
+                            strong Kinderpraktijk de puzzel
+                        ul.list-unstyled
+                            +listItem('Start', '/index.html')
+                            +listItem('Diensten', '/diensten/overzicht.html')
+                            +listItem('Contact', '/contact.html')
+                    div.col-md-3
+                        p
+                            strong Diensten
+                        ul.list-unstyled
+                            +listItem('Dienst a', '/diensten/overzicht.html')
+                            +listItem('Dienst b', '/diensten/overzicht.html')
+                            +listItem('Dienst c', '/diensten/overzicht.html')
+                            +listItem('Dienst d', '/diensten/overzicht.html')
+                    div.col-md-3
+                        p
+                            strong Contact
+                        ul.list-unstyled
+                            li ann@kinderpraktijkdepuzzel.be
+                            li Berg 7, Retie
+                            li tel: 0444/44.44.44
+                    div.col-md-3
+                        p.text-right
+                            strong 
+                                a(href="#") &uarr; top
