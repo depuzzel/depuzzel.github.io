@@ -1,13 +1,32 @@
+
+
 header.page-header
+    a(href="#", class="hidden-md-up", id="open_menu")
+        i(class="fa fa-bars pull-right hamburger fa-1", aria-hidden="true")
+
     h1 kinderpraktijk
         strong(style="padding-left: 5px") De puzzel
-    nav(class='main-nav md-center')
+    
+
+    nav(class='main-nav md-center hidden-sm-down')
         ul.main-nav__tabs
             li.main-nav__tabs--item
-                a(href="/index.html") Start
+                a(href="/index.html") 
+                    h2.menu__title
+                        | Start
+                    h3.menu__sub.hidden-md-down
+                        | sub
+            li.main-nav__tabs--active
+                a(href="/diensten/overzicht.html") 
+                    h2.menu__title Therapie
+                    h3.menu__sub.hidden-md-down Mogelijkheden
             li.main-nav__tabs--item
-                a(href="/diensten/overzicht.html") Diensten
+                a(href="/diensten/overzicht.html") 
+                    h2.menu__title Praktijkvisie
+                    h3.menu__sub.hidden-md-down Boeiende kindertherapie
             li.main-nav__tabs--item
-                a(href="/contact.html") Contact
+                a(href="/contact.html") 
+                    h2.menu__title Contact
+                    h3.menu__sub.hidden-md-down &nbsp;
 
     div(style="clear: both")

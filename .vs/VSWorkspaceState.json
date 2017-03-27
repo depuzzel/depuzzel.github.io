@@ -1,8 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\pug"
+    "\\assets",
+    "\\assets\\css",
+    "\\assets\\js",
+    "\\pug",
+    "\\pug\\includes"
   ],
-  "SelectedNode": "\\pug\\index.pug",
+  "SelectedNode": "\\assets\\css\\site.css",
   "PreviewInSolutionExplorer": false
 }

@@ -1,11 +1,15 @@
+doctype html
 include includes/mixins.pug
-
+block vars
 html
     head
+        meta(name="viewport", content="width=device-width, initial-scale=1")
         block meta
 
         include includes/csslink.pug
     body
+        include includes/mobile-menu.pug
+
         div(class="hidden-xs-down top-bar")
         div.container
             include includes/header.pug
@@ -14,3 +18,4 @@ html
                 block content
 
         include includes/footer.pug
+        include includes/scriptlink.pug
