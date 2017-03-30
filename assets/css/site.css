@@ -88,7 +88,7 @@ a.home-btn {
     }
 
         .main-nav > .main-nav__tabs > .main-nav__tabs--item > a:hover,
-        .main-nav > .main-nav__tabs > .main-nav__tabs--active {
+        .main-nav > .main-nav__tabs > .main-nav__tabs--active > a {
             background-color: #00D400;
             color: white;
         }
