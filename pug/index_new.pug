@@ -27,7 +27,5 @@ block content
     +sectionTitle('Motoriek')
 
     div.row
-        +loco('Motoriek', 'assets/images/home/page1-img1.jpg', 'diensten.html')
-        +loco('Schrijven & lezen', 'assets/images/home/page1-img2.jpg', 'diensten.html')
-        +loco('Dienst a', 'assets/images/home/page1-img3.jpg', 'diensten.html')
-        +loco('Dienst b', 'assets/images/home/page1-img4.jpg', 'diensten.html')
+        each val in diensten 
+            +loco(val.title, val.image, val.link)

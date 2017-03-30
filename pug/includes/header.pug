@@ -1,3 +1,4 @@
+include vars.pug
 
 
 header.page-header
@@ -10,23 +11,13 @@ header.page-header
 
     nav(class='main-nav md-center hidden-sm-down')
         ul.main-nav__tabs
-            li.main-nav__tabs--item
-                a(href="/index.html") 
-                    h2.menu__title
-                        | Start
-                    h3.menu__sub.hidden-md-down
-                        | sub
-            li.main-nav__tabs--active
-                a(href="/diensten/overzicht.html") 
-                    h2.menu__title Therapie
-                    h3.menu__sub.hidden-md-down Mogelijkheden
-            li.main-nav__tabs--item
-                a(href="/diensten/overzicht.html") 
-                    h2.menu__title Praktijkvisie
-                    h3.menu__sub.hidden-md-down Boeiende kindertherapie
-            li.main-nav__tabs--item
-                a(href="/contact.html") 
-                    h2.menu__title Contact
-                    h3.menu__sub.hidden-md-down &nbsp;
+            each x in menu
+                li.main-nav__tabs--item(data-menu-active=x.menuActive)
+                    a(href=x.link)
+                        h2.menu__title
+                            | #{x.title}
+                        h3.menu__sub.hidden-md-down
+                            | !{x.subTitle}
 
     div(style="clear: both")
+
