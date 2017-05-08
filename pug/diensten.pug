@@ -7,11 +7,8 @@ block content
     div.row
         div.col-md-3
             div.list-group
-                a.list-group-item(href='/diensten/overzicht.html') Overzicht
-                a.list-group-item(href='/diensten/dienst-a.html') Dienst A
-                a.list-group-item(href='/diensten/dienst-b.html') Dienst B
-                a.list-group-item(href='/diensten/dienst-c.html') Dienst C 
-                a.list-group-item(href='/diensten/dienst-d.html') Dienst D 
+                each item in diensten
+                    a.list-group-item(href=item.link) #{item.title}
 
         div.col-md-9
             block dienst

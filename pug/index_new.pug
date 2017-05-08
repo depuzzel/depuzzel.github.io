@@ -3,7 +3,7 @@ extends master
 include includes/mixins.pug
 
 mixin loco(name, picture, link)
-    div.col-sm-6.col-md-3
+    div.col-sm-6.col-md-4.offset-md-1
         div.card.card-inverse.img-filter.text-center.home-card
             img(src=picture)
             div.card-img-overlay
@@ -15,16 +15,26 @@ block meta
 
 block content
     div.row
-        div.col-md-8.offset-md-2.info-column
+        div.col-md-10.offset-md-1.info-column
             p 
-                | Bij kinderpraktijk de puzzel te Retie zorgen we voor een goede aanpak van uw kind.
-                | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                | Kinderpraktijk De Puzzel is een kinesitherapiepraktijk voor pediatrische revalidatie en psychomotoriek.
+                | De Puzzel is een praktijk waar alle kinderen welkom zijn. Spelenderwijs ontdekken en leren staat hier centraal.
             p
-                | Aarzel niet om 
-                a(href="contact.html") contact
-                |  op te nemen met ons voor verdere vragen!
+                | U kan bij mij terecht voor kinderkinesitherapie en voor psychomotoriek.
+            p
+                | Kinderen ontwikkelen op vele vlakken (mentaal, sociaal- emotioneel, motorisch, ...).
+                | Bij vele kinderen verloopt dit vanzelf, heel spontaan en zonder problemen. Het is een grote puzzel die moet kloppen.
+                | Bij een aantal van hen, lukt het minder goed.
+                | Ze hebben een duwtje in de rug nodig, ontwikkelen op het ene vlak veel sneller dan op het andere, ... 
+                | Bij deze kinderen proberen we om de ontwikkeling terug op 1 lijn te krijgen zodat ze ten volle kunnen groeien in alles wat ze doen.
+                | Kinesitherapie kan dan soms aangewezen zijn.
+            p
+                | Vanuit mijn opleiding (licentiaat in de revalidatiewetenschappen en Kinesitherapie, optie pediatrische revalidatie)
+                | en vanuit mijn ervaring binnen het gewone en buitengewone onderwijs probeer ik uw kind hierbij zo goed mogelijk te ondersteunen.
+            p
+                | SAMEN STAAN WE STERK!    
 
-    +sectionTitle('Motoriek')
+    +sectionTitle('Therapie mogelijkheden')
 
     div.row
         each val in diensten 

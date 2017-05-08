@@ -147,7 +147,7 @@ header h1.intro {
     padding: 20px 0;
 }
 
-strong {
+strong.primary {
     color: #00D400;
 }
 
@@ -244,4 +244,8 @@ footer.main {
     display: block;
     font-size: 2rem;
     margin-bottom: 10px;
+}
+
+.top-20 {
+    margin-top: 20px;
 }
