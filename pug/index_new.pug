@@ -3,7 +3,7 @@ extends master
 include includes/mixins.pug
 
 mixin loco(name, picture, link)
-    div.col-sm-6.col-md-4.offset-md-1
+    div.col-sm-6.col-md-3
         div.card.card-inverse.img-filter.text-center.home-card
             img(src=picture)
             div.card-img-overlay
@@ -37,5 +37,5 @@ block content
     +sectionTitle('Therapie mogelijkheden')
 
     div.row
-        each val in diensten 
+        each val in homeDiensten
             +loco(val.title, val.image, val.link)
