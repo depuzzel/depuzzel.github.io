@@ -3,7 +3,7 @@ extends master
 include includes/mixins.pug
 
 mixin loco(name, picture, link)
-    div.col-sm-6.col-md-3
+    div.col-sm-12.col-md-6
         div.card.card-inverse.img-filter.text-center.home-card
             img(src=picture)
             div.card-img-overlay
@@ -34,8 +34,19 @@ block content
             p
                 | SAMEN STAAN WE STERK!    
 
-    +sectionTitle('Therapie mogelijkheden')
-
     div.row
-        each val in homeDiensten
-            +loco(val.title, val.image, val.link)
+        div.col-md-6
+            div.row
+                div.col-md-12
+                    +sectionTitle('Therapie')
+            div.row
+                each val in diensten 
+                    +loco(val.title, val.image, val.link)
+
+        div.col-md-6
+            div.row
+                div.col-md-12
+                    +sectionTitle('Praktisch')
+            div.row
+                each val in homeDiensten
+                    +loco(val.title, val.image, val.link)
