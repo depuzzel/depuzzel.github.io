@@ -23,15 +23,6 @@ a.home-btn {
     padding: 5px 0;
 }
 
-.img-filter {
-    transition: .2s ease-in-out;
-    -webkit-filter: grayscale(25%);
-    filter: grayscale(25%);
-}
-
-    .img-filter:hover {
-        filter: grayscale(0%);
-    }
 
 .top-bar {
     height: 40px;
